@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Resource & tools</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="Styles/normalize.css">
+    <link rel="stylesheet" href="Styles/resourceStyle.css">
+    <link rel="shortcut icon" href="siteicon.png" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+              <a href="index.html" class="logo">CyberTerms</a>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="glossary.html">المصطلحات</a>
+                <a href="resource.html">المصادر والادوات</a>
+                <a href="quizzes.html">لعبة الاختبار</a>
+                <a href="about.html">عنّا</a>
+            </div>
+          </nav>
+    </header>
+
+    <main class="resources-container">
+        <h1>موارد وأدوات الأمن السيبراني</h1>
+        
+        <div class="category-filter">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="tools">الأدوات</button>
+            <button class="filter-btn" data-filter="learning">التعلم</button>
+            <button class="filter-btn" data-filter="organizations">المنظمات</button>
+        </div>
+
+        <div class="resource-grid">
+            <!-- Featured Resource -->
+            <div class="featured-resource">
+                <div class="resource-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="resource-details">
+                    <h2>دورة مجانية: أساسيات الأمن السيبراني</h2>
+                    <p>ابدأ رحلتك في الأمن السيبراني مع هذه الدورة المجانية من منصة Cisco Networking Academy</p>
+                    <a href="https://youtu.be/VyXQ8CMIQl4?si=Y0GirB7MGmTQ4lLJ" class="cta-button">الوصول للدورة</a>
+                </div>
+            </div>
+
+            <!-- Tool Card -->
+            <div class="resource-card" data-category="tools">
+                <i class="fas fa-shield-alt resource-icon"></i>
+                <h3 class="resource-title">أدوات فحص الثغرات</h3>
+                <p class="resource-description">أدوات مفتوحة المصدر لاكتشاف الثغرات الأمنية</p>
+                <div class="resource-links">
+                    <li><a href="https://www.openvas.org"><i class="fas fa-link"></i> OpenVAS</a></li>
+                    <li><a href="https://openvas.org/download.html"><i class="fas fa-download"></i> رابط التنزيل</a></li>
+                </div>
+            </div>
+
+            <div class="resource-card" data-category="tools">
+                <i class="fab fa-linux resource-icon"></i>
+                <h3 class="resource-title">أدوات Kali Linux</h3>
+                <p class="resource-description">مجموعة أدوات اختبار الاختراق</p>
+                <div class="resource-links">
+                    <li><a href="https://www.kali.org/tools/"><i class="fas fa-tools"></i> القائمة الكاملة</a></li>
+                    <li><a href="https://drive.google.com/uc?export=download&id=1uB_hrre9DHiL_TihebbgCgOuaKNXr3uj"><i class="fas fa-download"></i> دليل التثبيت</a></li>
+                </div>
+            </div>
+            
+            <div class="resource-card" data-category="tools">
+                <i class="fas fa-eye resource-icon"></i>
+                <h3 class="resource-title">Nmap – أداة فحص الشبكات</h3>
+                <p class="resource-description">أداة مفتوحة المصدر تُستخدم لاستكشاف الشبكات وتحديد الأجهزة والخدمات المتصلة بها، وتساعد في اكتشاف الثغرات.</p>
+                <div class="resource-links">
+                    <li><a href="https://nmap.org/book/"><i class="fas fa-tools"></i> القائمة الكاملة</a></li>
+                    <li><a href="https://nmap.org/download.html"><i class="fas fa-download"></i> رابط التثبيت</a></li>
+                </div>
+            </div>
+            
+            <div class="resource-card" data-category="tools">
+                <i class="fas fa-network-wired resource-icon"></i>
+                <h3 class="resource-title">Wireshark – محلل حركة الشبكة</h3>
+                <p class="resource-description">برنامج لتحليل حركة المرور على الشبكات، يتيح للمستخدمين مراقبة وتحليل حزم البيانات بشكل مفصل.</p>
+                <div class="resource-links">
+                    <li><a href="https://wireshark.org/docs/"><i class="fas fa-tools"></i> القائمة الكاملة</a></li>
+                    <li><a href="https://wireshark.org/download.html"><i class="fas fa-download"></i> رابط التثبيت</a></li>
+                </div>
+            </div>
+            
+            <div class="resource-card" data-category="tools">
+                <i class="fas fa-keyboard resource-icon"></i>
+                <h3 class="resource-title">John the Ripper – كسر كلمات المرور</h3>
+                <p class="resource-description">أداة متخصصة في اختبار قوة كلمات المرور عن طريق كسرها باستخدام تقنيات متعددة.</p>
+                <div class="resource-links">
+                    <li><a href="https://openwall.com/john/doc/"><i class="fas fa-tools"></i> القائمة الكاملة</a></li>
+                    <li><a href="https://openwall.com/john/"><i class="fas fa-download"></i> رابط التثبيت</a></li>
+                </div>
+            </div>
+
+            <!-- Learning Resource -->
+            <div class="resource-card" data-category="learning">
+                <i class="fas fa-graduation-cap resource-icon"></i>
+                <h3 class="resource-title">دورات مجانية</h3>
+                <p class="resource-description">مسارات تعليمية من منصات عالمية</p>
+                <div class="resource-links">
+                    <li><a href="https://youtu.be/ZEcWHjLDuDg?si=4cn_Cu2tFgkC7KDJ"><i class="fab fa-youtube"></i> Cybersecurity Essentials</a></li>
+                    
+                </div>
+            </div>
+            
+            <div class="resource-card" data-category="learning">
+                <i class="fab fa-youtube resource-icon"></i>
+                <h3 class="resource-title">HackerSploit – دروس في الاختراق الأخلاقي والأمن السيبراني</h3>
+                <p class="resource-description">قناة تقدم شروحات عملية وأدوات وتقنيات لاختبار الاختراق وتحليل الثغرات الأمنية بأسلوب مبسط ومباشر.</p>
+                <div class="resource-links">
+                    <li><a href="https://www.youtube.com/@S7ee7"><i class="fab fa-youtube"></i>HackerSploit</a></li>
+                </div>
+            </div>
+            
+            <div class="resource-card" data-category="learning">
+                <i class="fab fa-youtube resource-icon"></i>
+                <h3 class="resource-title">IppSec – تحليل تحديات HackTheBox</h3>
+                <p class="resource-description">قناة تركز على تحليل ومراجعة تحديات اختراق منصة HackTheBox مع شرح مفصل للخطوات والأساليب المستخدمة.</p>
+                <div class="resource-links">
+                    <li><a href="https://youtube.com/@ippsec?si=p4LY_4KeglNSjnsw"><i class="fab fa-youtube"></i>HackTheBox</a></li>
+                </div>
+            </div>
+            
+            <div class="resource-card" data-category="learning">
+                <i class="fas fa-graduation-cap resource-icon"></i>
+                <h3 class="resource-title">Coursera – دورات وتخصصات في الأمن السيبراني</h3>
+                <p class="resource-description">منصة تعليمية تضم دورات من جامعات مرموقة تشمل موضوعات متعددة في الأمن السيبراني، مع إمكانية الوصول إلى محتوى مجاني..</p>
+                <div class="resource-links">
+                    <li><a href="https://www.coursera.org/"><i class="fas fa-external-link-alt"></i>Coursera</a></li>
+                </div>
+            </div>
+
+            <!-- Cheat Sheet -->
+            <div class="resource-card" data-category="tools">
+                    <i class="fas fa-file-pdf resource-icon"></i>
+                    <h3 class="resource-title">ملخص أوامر الأمان</h3>
+                    <p class="resource-description">دليل سريع لأهم أوامر الأمان في لينكس</p>
+                    <span class="download-badge">PDF 3.46 MB</span>
+                    <a href=" https://drive.google.com/uc?export=download&id=1uB_hrre9DHiL_TihebbgCgOuaKNXr3uj " class="cta-button" download>تنزيل</a>
+            </div>
+            
+
+            <!-- Organization Card -->
+            <div class="resource-card" data-category="organizations">
+                <i class="fas fa-university resource-icon"></i>
+                <h3 class="resource-title">OWASP – مشروع أمان تطبيقات الويب المفتوح</h3>
+                <p class="resource-description">منظمة غير ربحية تُعنى بتحسين أمان تطبيقات الويب من خلال توفير أدوات، معايير، ودورات تدريبية.</p>
+                <div class="resource-links">
+                    <li><a href="https://owasp.org"><i class="fas fa-external-link-alt"></i> OWASP</a></li>
+                </div>
+            </div>
+            
+            <div class="resource-card" data-category="organizations">
+                <i class="fas fa-university resource-icon"></i>
+                <h3 class="resource-title">SANS Institute – معهد التدريب والأبحاث</h3>
+                <p class="resource-description">مؤسسة عالمية تقدم دورات تدريبية متخصصة وشهادات احترافية في مجالات الأمن السيبراني والتحليل الجنائي الرقمي.</p>
+                <div class="resource-links">
+                    <li><a href="https://sans.org"><i class="fas fa-external-link-alt"></i> SANS Institute</a></li>
+                </div>
+            </div>
+            
+            <div class="resource-card" data-category="organizations">
+                <i class="fas fa-university resource-icon"></i>
+                <h3 class="resource-title">CIS (Center for Internet Security)</h3>
+                <p class="resource-description">مؤسسة غير ربحية تُعنى بتطوير معايير وممارسات لتحسين الأمان السيبراني لدى المؤسسات على مستوى العالم.</p>
+                <div class="resource-links">
+                    <li><a href="https://cisecurity.org"><i class="fas fa-external-link-alt"></i> CIS Institute</a></li>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const resourceCards = document.querySelectorAll('.resource-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+                
+                // Update active state
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Filter cards
+                resourceCards.forEach(card => {
+                    const category = card.dataset.category;
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Reuse footer from previous pages -->
+</body>
+</html>

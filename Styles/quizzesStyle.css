@@ -1,0 +1,263 @@
+:root {
+    --primary: #2A5C82;
+    --accent: #39A9DB;
+    --success: #28a745;
+    --danger: #dc3545;
+    --background: #f8f9fa;
+    --cyber-teal: #39A9DB;
+    --warning-yellow: #FFD966;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: var(--background);
+    margin: 0;
+}
+
+/* Site Header */
+.header {
+    background: rgba(42, 92, 130, 0.95);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .header .nav-container {
+        justify-content: space-around;
+    }
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--warning-yellow);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    right: 0;
+    background: var(--cyber-teal);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto 0;
+}
+
+/* Quiz Section */
+.quiz-section {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.question-card {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.question-card.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.question-number {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.question-text {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.option {
+    background: #fff;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option:hover {
+    border-color: var(--accent);
+    transform: translateX(-5px);
+}
+
+.option.correct {
+    background: #e6ffed;
+    border-color: var(--success);
+}
+
+.option.wrong {
+    background: #ffe6e6;
+    border-color: var(--danger);
+}
+
+/* Password Simulator */
+.password-simulator {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+.password-input {
+    width: 95%;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.strength-meter {
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+    margin: 1rem 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0;
+    background: var(--danger);
+    transition: all 0.3s ease;
+}
+
+.criteria-list {
+    list-style: none;
+    padding: 0;
+}
+
+.criteria-item {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.criteria-item.valid {
+    color: var(--success);
+}
+
+.criteria-item.valid i {
+    margin-left: 0.5rem;
+}
+
+/* Results Section */
+.results {
+    display: none;
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.score {
+    font-size: 2rem;
+    color: var(--primary);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.password-generator {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.results-btn:disabled:hover {
+    cursor: not-allowed;
+}
+
+/* Optional: Style for enabled state */
+.results-btn:not(:disabled):hover {
+    cursor: pointer;
+    background-color: var(--accent);
+}
+
+.generate-btn, .copy-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.generate-btn {
+    background: var(--primary);
+    color: white;
+}
+
+.copy-btn {
+    background: var(--accent);
+    color: white;
+}
+
+.answer-review-item {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+.correct-answer {
+    background: #e6ffed;
+    border: 2px solid var(--success);
+}
+
+.wrong-answer {
+    background: #ffe6e6;
+    border: 2px solid var(--danger);
+}

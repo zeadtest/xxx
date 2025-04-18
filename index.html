@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>الجامعة المستنصرية - الأمن السيبراني </title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="Styles/normalize.css" />
+    <link rel="stylesheet" href="Styles/style.css" />
+    <link rel="shortcut icon" href="siteicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">CyberTerms</a>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="glossary.html">المصطلحات</a>
+                <a href="resource.html">المصادر والادوات</a>
+                <a href="quizzes.html">لعبة الاختبار</a>
+                <a href="about.html">عنّا</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="cyber-elements">
+            <i class="cyber-element fas fa-shield-alt" style="top: 10%; left: 5%"></i>
+            <i class="cyber-element fas fa-lock" style="top: 80%; right: 10%"></i>
+            <i class="cyber-element fas fa-code" style="top: 30%; left: 25%"></i>
+            <i class="cyber-element fas fa-user-secret" style="top: 60%; right: 30%"></i>
+            <i class="cyber-element fas fa-network-wired" style="top: 45%; left: 15%"></i>
+            <i class="cyber-element fas fa-fingerprint" style="top: 20%; right: 20%"></i>
+            <i class="cyber-element fas fa-fire" style="top: 70%; left: 20%"></i>
+            <i class="cyber-element fas fa-database" style="top: 40%; right: 5%"></i>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">احمِ عالمك الرقمي</h1>
+            <p class="hero-description">اكشف أسرار الأمن السيبراني من خلال مصادرنا الشاملة. تعلّم المصطلحات الأساسية، تفهم التهديدات الحديثة، وطور مهاراتك في الحماية الرقمية.</p>
+            <a href="glossary.html" class="cta-button">ابدأ الرحلة التعليمية</a>
+        </div>
+    </section>
+
+    <section class="mission-section">
+        <h2>مهمتنا</h2>
+        <div class="mission-grid">
+            <div class="mission-card">
+                <i class="mission-icon fas fa-graduation-cap"></i>
+                <h3>التعليم التأسيسي</h3>
+                <p>شرح المصطلحات التقنية بلغة بسيطة ومفهومة للجميع</p>
+            </div>
+            <div class="mission-card">
+                <i class="mission-icon fas fa-shield-alt"></i>
+                <h3>الحماية الوقائية</h3>
+                <p>توعية المستخدمين بأحدث التهديدات الإلكترونية وطرق الوقاية</p>
+            </div>
+            <div class="mission-card">
+                <i class="mission-icon fas fa-globe"></i>
+                <h3>مجتمع آمن</h3>
+                <p>بناء مجتمع واعي رقميًا قادر على مواجهة التحديات الحديثة</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>الأكاديمية</h4>
+                <ul>
+                    <li><a href="about.html">عن المشروع</a></li>
+                    <li><a href="about.html">فريق العمل</a></li>
+                    <li><a href="about.html">الشركاء</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>التواصل</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/%D8%B2%D9%8A%D8%A7%D8%AF-%D9%81%D9%84%D8%A7%D8%AD-%D9%85%D8%AD%D9%85%D8%AF511?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/zeadll" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1EAJxyPiKs/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://t.me/oham3" target="_blank"><i class="fab fa-telegram"></i></a>
+                </div>
+                <p>البريد الإلكتروني: s1021014@uomustansiriyah.edu.iq</p>
+                <p>الهاتف: 9647849594878+</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 الجامعة المستنصرية - الأمن السيبراني . جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        });
+
+        document.querySelectorAll(".mission-card").forEach((card) => {
+            card.style.opacity = 0;
+            card.style.transform = "translateY(20px)";
+            card.style.transition = "all 0.6s ease";
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
+

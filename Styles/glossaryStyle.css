@@ -1,0 +1,172 @@
+:root {
+    --primary-color: #2A5C82;
+    --secondary-color: #39A9DB;
+    --accent-color: #FFD966;
+    --cyber-teal: #39A9DB;
+    --warning-yellow: #FFD966;
+}
+
+body {
+    font-family: 'Cairo', 'Noto Sans Arabic', sans-serif;
+    direction: rtl;
+    margin: 0;
+    background: #f8f9fa;
+}
+
+/* Site Header */
+.header {
+    background: rgba(42, 92, 130, 0.95);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .header .nav-container {
+        justify-content: space-around;
+    }
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--warning-yellow);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    right: 0;
+    background: var(--cyber-teal);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+.title-header {
+    background: var(--primary-color);
+    padding: 1rem 2rem;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.search-section {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.search-box {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1rem;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+}
+
+.glossary-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.term-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.term-card:hover {
+    transform: translateY(-5px);
+}
+
+.term-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+
+.term-title {
+    color: var(--primary-color);
+    margin: 0 0 1rem 0;
+}
+
+.term-definition {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.example-section {
+    flex-grow: 1;
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.read-more {
+    display: inline-block;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .glossary-container {
+        grid-template-columns: 1fr;
+    }
+}

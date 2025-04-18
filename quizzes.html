@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>التدريبات الأمنية التفاعلية</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Styles/normalize.css" />
+    <link rel="stylesheet" href="Styles/quizzesStyle.css" />
+    <link rel="shortcut icon" href="siteicon.png" type="image/x-icon">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav-container">
+          <a href="index.html" class="logo">CyberTerms</a>
+        <div class="nav-links">
+          <a href="index.html">الرئيسية</a>
+          <a href="glossary.html">المصطلحات</a>
+          <a href="resource.html">المصادر والادوات</a>
+          <a href="quizzes.html">لعبة الاختبار</a>
+          <a href="about.html">عنّا</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <!-- Quiz Section -->
+      <section class="quiz-section">
+        <h2>اختبار الأمن السيبراني ⚡</h2>
+        <div id="quiz-container">
+          <!-- Questions will be injected here -->
+        </div>
+        <button
+          id="submit-btn"
+          class="btn-primary results-btn"
+          onclick="showResults()"
+          disabled
+        >
+          اظهر النتائج
+        </button>
+      </section>
+
+      <!-- Results Section -->
+      <section class="results" id="results">
+        <h2>النتائج 🏆</h2>
+        <div class="score" id="score"></div>
+        <div id="answers-review"></div>
+        <button onclick="resetQuiz()" class="btn-primary">
+          إعادة المحاولة
+        </button>
+      </section>
+
+      <!-- Password Simulator -->
+      <section class="password-simulator">
+        <h2>محاكاة إنشاء كلمة مرور قوية 🔒</h2>
+        <input
+          type="text"
+          class="password-input"
+          placeholder="أدخل كلمة المرور..."
+          oninput="checkPasswordStrength(this.value)"
+        />
+        <div class="strength-meter">
+          <div class="strength-bar" id="strength-bar"></div>
+        </div>
+        <ul class="criteria-list">
+          <li class="criteria-item" id="length">
+            <i class="fas fa-times"></i> 8 أحرف على الأقل
+          </li>
+          <li class="criteria-item" id="uppercase">
+            <i class="fas fa-times"></i> حرف كبير واحد على الأقل
+          </li>
+          <li class="criteria-item" id="number">
+            <i class="fas fa-times"></i> رقم واحد على الأقل
+          </li>
+          <li class="criteria-item" id="special">
+            <i class="fas fa-times"></i> رمز خاص (!@#$%^&*)
+          </li>
+        </ul>
+      </section>
+
+      <div class="password-generator">
+        <button onclick="generatePassword()" class="generate-btn">
+          توليد كلمة مرور <i class="fas fa-sync-alt"></i>
+        </button>
+        <button onclick="copyPassword()" class="copy-btn">
+          نسخ <i class="far fa-copy"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="quizzesScript.js"></script>
+  </body>
+</html>
